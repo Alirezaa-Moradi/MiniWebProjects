@@ -1,0 +1,57 @@
+// Modules
+@use '../layout/grid' as g;
+@use '../layout/flex' as f;
+@use '../utils/' as color;
+
+.info {
+  @include g.Grid(4, 8);
+  grid-area: 5/1/9/-1;
+  padding: 0 2rem;
+  background: color.$white;
+  border-radius: 2rem 2rem 0 0;
+
+  h1 {
+    grid-area: 1/1/2/-1;
+    align-self: center;
+  }
+
+  .coloring {
+    @include f.Flex(row, nowrap, center, center);
+    grid-area: 1/1/2/-1;
+    align-self: end;
+    width: 10rem;
+    height: 2.2rem;
+    transform: translateY(1rem);
+    font-size: 1.3rem;
+    color: color.$white;
+    background: darken(color.$purple-3, 10%);
+    border: none;
+    border-radius: .3rem;
+  }
+
+  .description {
+    grid-area: 2/1/-2/-1;
+    align-self: center;
+    text-align: left;
+    color: color.$gray;
+  }
+
+  & > div {
+    @include f.Flex(row, nowrap, space-between, center);
+    grid-area: -2/1/-1/-1;
+
+    button {
+      width: 20rem;
+      height: 5rem;
+      color: color.$white;
+      background: color.$purple-2;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      
+      &:hover {
+        background: lighten(color.$purple-2, 10%);
+      }
+    }
+  }
+}

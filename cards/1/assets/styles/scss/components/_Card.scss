@@ -1,0 +1,39 @@
+// Modules
+@use '../layout/grid' as g;
+@use '../layout/flex' as f;
+@use '../utils/' as color;
+
+.card {
+  @include g.Grid(8, 8);
+  grid-area: 3/5/11/9;
+  background: linear-gradient(to top right, color.$purple-2, color.$purple-3);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  .like {
+    @include f.Flex(row, nowrap, center, center);
+    grid-area: 1/7/1/-1;
+    justify-self: end;
+    width: 7rem;
+    height: 7rem;
+    clip-path: circle(40%);
+    transform: translate(-2rem, 1rem);
+    background: color.$purple-2;
+    border: none;
+    cursor: pointer;
+    
+    img {
+      width: 3rem;
+      justify-self: center;
+      align-self: center;
+    }
+  }
+
+  [alt="shoe"] {
+    grid-area: 1/1/5/-1;
+    justify-self: center;
+    align-self: center;
+    width: 25rem;
+    transform: rotate(330deg);
+  }
+}

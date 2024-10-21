@@ -1,0 +1,13 @@
+// Modules
+@use '../global/' as *;
+@use '../layout/' as *;
+@use '../utils/' as *;
+
+// Components
+@use '../components/' as *;
+
+// Styles
+body {
+  @include Grid(12, 12);
+  background: $purple-1;
+}

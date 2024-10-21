@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  font-family: "Poppins";
+  font-size: 10px;
+}
+
+body {
+  height: 100dvh;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+.card {
+  display: grid;
+  grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+  grid-area: 3/5/11/9;
+  background: linear-gradient(to top right, #4C4861, #A69CD8);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card .like {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/7/1/-1;
+  justify-self: end;
+  width: 7rem;
+  height: 7rem;
+  clip-path: circle(40%);
+  transform: translate(-2rem, 1rem);
+  background: #4C4861;
+  border: none;
+  cursor: pointer;
+}
+.card .like img {
+  width: 3rem;
+  justify-self: center;
+  align-self: center;
+}
+.card [alt=shoe] {
+  grid-area: 1/1/5/-1;
+  justify-self: center;
+  align-self: center;
+  width: 25rem;
+  transform: rotate(330deg);
+}
+
+.info {
+  display: grid;
+  grid-template: repeat(4, 1fr)/repeat(8, 1fr);
+  grid-area: 5/1/9/-1;
+  padding: 0 2rem;
+  background: #FFF;
+  border-radius: 2rem 2rem 0 0;
+}
+.info h1 {
+  grid-area: 1/1/2/-1;
+  align-self: center;
+}
+.info .coloring {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/1/2/-1;
+  align-self: end;
+  width: 10rem;
+  height: 2.2rem;
+  transform: translateY(1rem);
+  font-size: 1.3rem;
+  color: #FFF;
+  background: #8577ca;
+  border: none;
+  border-radius: 0.3rem;
+}
+.info .description {
+  grid-area: 2/1/-2/-1;
+  align-self: center;
+  text-align: left;
+  color: #808080;
+}
+.info > div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: -2/1/-1/-1;
+}
+.info > div button {
+  width: 20rem;
+  height: 5rem;
+  color: #FFF;
+  background: #4C4861;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.info > div button:hover {
+  background: #635e7e;
+}
+
+body {
+  display: grid;
+  grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  background: #E5E0FF;
+}/*# sourceMappingURL=home.css.map */
