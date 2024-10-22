@@ -1,0 +1,45 @@
+// Modules
+@use '../layout/' as *;
+@use '../utils/' as *;
+
+// Styles
+.card {
+  @include Grid(8, 8);
+  grid-area: 4/5/10/9;
+  justify-self: center;
+  width: 80%;
+  color: $white;
+  background: $navy-1;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    grid-area: 1/1/-1/-1;
+    justify-self: center;
+    align-self: center;
+    width: 150%;
+    height: 150%;
+    transform-origin: center;
+    background: conic-gradient(
+      $blue-1 0deg, $blue-1 90deg,
+      $navy-1 90deg, $navy-1 180deg,
+      $pink-1 180deg, $pink-1 270deg,
+      $navy-1 270deg, $navy-1 360deg,
+    );
+    animation: rotation 5s linear infinite;
+  }
+
+  p {
+    @include Flex(column, nowrap, center, center);
+    grid-area: 1/1/-1/-1;
+    justify-self: center;
+    align-self: center;
+    width: 98%;
+    height: 98%;
+    color: $white;
+    background: $navy-1;
+    border-radius: 1rem;
+    z-index: 1;
+  }
+}

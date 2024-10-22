@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  font-family: "Poppins";
+  font-size: 10px;
+}
+
+body {
+  height: 100dvh;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+.card {
+  display: grid;
+  grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+  grid-area: 4/5/10/9;
+  justify-self: center;
+  width: 80%;
+  color: #FFF;
+  background: #1E3E62;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.card::before {
+  content: "";
+  grid-area: 1/1/-1/-1;
+  justify-self: center;
+  align-self: center;
+  width: 150%;
+  height: 150%;
+  transform-origin: center;
+  background: conic-gradient(#1E90FF 0deg, #1E90FF 90deg, #1E3E62 90deg, #1E3E62 180deg, #FF0080 180deg, #FF0080 270deg, #1E3E62 270deg, #1E3E62 360deg);
+  animation: rotation 5s linear infinite;
+}
+.card p {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/1/-1/-1;
+  justify-self: center;
+  align-self: center;
+  width: 98%;
+  height: 98%;
+  color: #FFF;
+  background: #1E3E62;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+body {
+  display: grid;
+  grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  background: #181C14;
+}/*# sourceMappingURL=home.css.map */
