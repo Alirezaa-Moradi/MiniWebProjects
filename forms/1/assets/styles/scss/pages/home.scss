@@ -1,0 +1,55 @@
+// Modules
+@use '../global/' as *;
+@use '../layout/' as *;
+@use '../utils/' as *;
+
+// Styles
+body {
+  @include Grid(12, 12);
+  background: $black;
+
+  h1 {
+    grid-area: 4/4/6/10;
+    justify-self: center;
+    align-self: center;
+    font-size: 4rem;
+    color: $white;
+
+    span {
+      color: $orange-1;
+    }
+  }
+
+  form {
+    @include Grid(8, 8);
+    grid-area: 4/4/10/10;
+
+    input {
+      text-indent: 1rem;
+    }
+
+    [name="userPass"] {
+      grid-area: 4/2/6/-2;
+      justify-self: center;
+      align-self: center;
+      width: 90%;
+      height: 50%;
+      border: solid $gray .1rem;
+      border-radius: .3rem;
+
+      &:focus {
+        outline: solid $purple-1 .3rem;
+        border: none;
+      }
+    }
+
+    [alt="eye icon"] {
+      grid-area: 4/7/6/8;
+      justify-self: center;
+      align-self: center;
+      width: 2.5rem;
+      transform: translateX(-1rem);
+      cursor: pointer;
+    }
+  }
+}

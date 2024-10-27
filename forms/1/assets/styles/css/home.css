@@ -1,0 +1,84 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  font-family: "Poppins";
+  font-size: 10px;
+}
+
+body {
+  height: 100dvh;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+button {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+}
+
+input {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../fonts/Poppins-Regular.ttf");
+}
+body {
+  display: grid;
+  grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  background: #000;
+}
+body h1 {
+  grid-area: 4/4/6/10;
+  justify-self: center;
+  align-self: center;
+  font-size: 4rem;
+  color: #FFF;
+}
+body h1 span {
+  color: #FF6600;
+}
+body form {
+  display: grid;
+  grid-template: repeat(8, 1fr)/repeat(8, 1fr);
+  grid-area: 4/4/10/10;
+}
+body form input {
+  text-indent: 1rem;
+}
+body form [name=userPass] {
+  grid-area: 4/2/6/-2;
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+  height: 50%;
+  border: solid #808080 0.1rem;
+  border-radius: 0.3rem;
+}
+body form [name=userPass]:focus {
+  outline: solid #6EC207 0.3rem;
+  border: none;
+}
+body form [alt="eye icon"] {
+  grid-area: 4/7/6/8;
+  justify-self: center;
+  align-self: center;
+  width: 2.5rem;
+  transform: translateX(-1rem);
+  cursor: pointer;
+}/*# sourceMappingURL=home.css.map */

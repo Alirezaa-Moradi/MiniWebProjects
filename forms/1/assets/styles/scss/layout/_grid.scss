@@ -1,0 +1,4 @@
+@mixin Grid($row, $col) {
+  display: grid;
+  grid-template: repeat($row, 1fr) / repeat($col, 1fr);
+}
